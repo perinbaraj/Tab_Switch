@@ -2,15 +2,15 @@ import time
 from selenium import webdriver
 
 driver = webdriver.Chrome(executable_path=r'C:/Users/user/Downloads/er/chromedriver.exe')
-driver.get("https://monitor.hubble.in/")
+driver.get("URL")
 driver.maximize_window()
 
 #Login_page
 Logging = driver.find_element_by_xpath('//*[@id="login-view"]/form/div[1]/input')
-Logging.send_keys('anand.kumar@infrastack-labs.com')
+Logging.send_keys('USERNAME')
 Logging = driver.find_element_by_xpath('//*[@id="inputPassword"]')
 Logging.click()
-Logging.send_keys('Anand@123')
+Logging.send_keys('PWD')
 Logging = driver.find_element_by_xpath('//*[@id="login-view"]/form/div[3]/button')
 Logging.click()
 time.sleep(10)
